@@ -1,6 +1,10 @@
 package Ast_Web;
 
 public class JsonPairNode extends AstNode {
+<<<<<<< HEAD
+=======
+
+>>>>>>> d54e76de6f500ed28981183f66cc0addcb0448e8
     private String key;
     private AstNode value;
 
@@ -25,6 +29,12 @@ public class JsonPairNode extends AstNode {
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         return this.getClass().getSimpleName() + " @" + line + ":" + column;
     }
 }
+=======
+        return key;
+    }
+}
+>>>>>>> d54e76de6f500ed28981183f66cc0addcb0448e8

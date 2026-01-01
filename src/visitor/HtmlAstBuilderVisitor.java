@@ -286,7 +286,11 @@ public class HtmlAstBuilderVisitor extends UnifiedParserBaseVisitor<AstNode> {
     @Override
     public AstNode visitJinjaExtends(UnifiedParser.JinjaExtendsContext ctx) {
         if (extendsSeen) {
+<<<<<<< HEAD
           //  System.err.println("تحذير: أكثر من extends (تم تجاهل الزائد)");
+=======
+            System.err.println("تحذير: أكثر من extends (تم تجاهل الزائد)");
+>>>>>>> d54e76de6f500ed28981183f66cc0addcb0448e8
             return null;
         }
         extendsSeen = true;

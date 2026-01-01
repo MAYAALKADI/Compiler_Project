@@ -4,9 +4,14 @@ public interface AstVisitor {
     void visit(ProgramNode node);
     void visit(HtmlElementNode node);
     void visit(HtmlAttributeNode node);
+<<<<<<< HEAD
     void visit(JinjaBlockNode node);
     void visit(HtmlTextNode node);
 
+=======
+    void visit(HtmlTextNode node);
+    void visit(JinjaBlockNode node);
+>>>>>>> d54e76de6f500ed28981183f66cc0addcb0448e8
     void visit(JinjaExpressionNode node);
     void visit(JinjaIfNode node);
     void visit(JinjaForNode node);

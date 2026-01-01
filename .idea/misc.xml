@@ -6,7 +6,11 @@
         <PerGrammarGenerationSettings>
           <option name="fileName" value="$PROJECT_DIR$/src/antlr/PythonParser.g4" />
           <option name="autoGen" value="true" />
+<<<<<<< HEAD
           <option name="outputDir" value="D:\مشاريع المترجمات\Compiler_project\src" />
+=======
+          <option name="outputDir" value="E:\مراحل عمل مشروع المترجمات\Compiler_project\src" />
+>>>>>>> d54e76de6f500ed28981183f66cc0addcb0448e8
           <option name="libDir" value="" />
           <option name="encoding" value="" />
           <option name="pkg" value="" />
@@ -16,7 +20,11 @@
         <PerGrammarGenerationSettings>
           <option name="fileName" value="$PROJECT_DIR$/src/antlr/UnifiedParser.g4" />
           <option name="autoGen" value="true" />
+<<<<<<< HEAD
           <option name="outputDir" value="D:\مشاريع المترجمات\Compiler_project\src" />
+=======
+          <option name="outputDir" value="E:\مراحل عمل مشروع المترجمات\Compiler_project\src" />
+>>>>>>> d54e76de6f500ed28981183f66cc0addcb0448e8
           <option name="libDir" value="" />
           <option name="encoding" value="" />
           <option name="pkg" value="" />

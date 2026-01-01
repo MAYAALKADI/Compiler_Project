@@ -90,7 +90,11 @@ for_stmt
 
 // BLOCKS
 suite
+<<<<<<< HEAD
     : NEWLINE INDENT? (statement | NEWLINE)* DEDENT?           #SuiteBlock
+=======
+    : NEWLINE INDENT? (statement | NEWLINE)* DEDENT*            #SuiteBlock
+>>>>>>> d54e76de6f500ed28981183f66cc0addcb0448e8
     | simple_stmt                                             #SuiteSimple
     ;
 

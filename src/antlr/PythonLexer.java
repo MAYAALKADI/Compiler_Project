@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Generated from D:/مشاريع المترجمات/Compiler_project/src/antlr/PythonLexer.g4 by ANTLR 4.13.2
+=======
+// Generated from E:/مراحل عمل مشروع المترجمات/Compiler_project/src/antlr/PythonLexer.g4 by ANTLR 4.13.2
+>>>>>>> d54e76de6f500ed28981183f66cc0addcb0448e8
 package antlr;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;

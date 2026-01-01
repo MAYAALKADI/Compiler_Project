@@ -13,4 +13,13 @@ public class HtmlAttributeNode extends AstNode {
     public void accept(AstVisitor visitor) {
         visitor.visit(this);
     }
+<<<<<<< HEAD
 }
+=======
+
+    @Override
+    public String toString() {
+        return name + "=" + value;
+    }
+}
+>>>>>>> d54e76de6f500ed28981183f66cc0addcb0448e8

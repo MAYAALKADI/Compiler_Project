@@ -1,6 +1,10 @@
 package Ast_Web;
 
 public class JinjaIfNode extends AstNode {
+<<<<<<< HEAD
+=======
+
+>>>>>>> d54e76de6f500ed28981183f66cc0addcb0448e8
     private String condition;
     private AstNode content;
 
@@ -24,6 +28,12 @@ public class JinjaIfNode extends AstNode {
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         return this.getClass().getSimpleName() + " @" + line + ":" + column;
     }
 }
+=======
+        return "{% if %}";
+    }
+}
+>>>>>>> d54e76de6f500ed28981183f66cc0addcb0448e8

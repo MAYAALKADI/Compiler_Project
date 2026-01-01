@@ -1,6 +1,10 @@
 package Ast_Web;
 
 public class JinjaForNode extends AstNode {
+<<<<<<< HEAD
+=======
+
+>>>>>>> d54e76de6f500ed28981183f66cc0addcb0448e8
     private String expression;
     private AstNode content;
     private AstNode elseContent;
@@ -31,4 +35,13 @@ public class JinjaForNode extends AstNode {
     public void accept(AstVisitor visitor) {
         visitor.visit(this);
     }
+<<<<<<< HEAD
 }
+=======
+
+    @Override
+    public String toString() {
+        return "{% for %}";
+    }
+}
+>>>>>>> d54e76de6f500ed28981183f66cc0addcb0448e8

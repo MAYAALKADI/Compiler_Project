@@ -12,6 +12,12 @@ public class DoctypeNode extends AstNode {
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         return this.getClass().getSimpleName() + " @" + line + ":" + column;
     }
 }
+=======
+        return "<!DOCTYPE html>";
+    }
+}
+>>>>>>> d54e76de6f500ed28981183f66cc0addcb0448e8

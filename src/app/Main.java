@@ -9,6 +9,7 @@ import org.antlr.v4.runtime.*;
 import antlr.UnifiedLexer;
 import antlr.UnifiedParser;
 
+<<<<<<< HEAD
 import antlr.PythonLexer;
 import antlr.PythonParser;
 
@@ -17,6 +18,13 @@ import visitor.HtmlAstBuilderVisitor;
 import visitor.PythonAstBuilder;
 import visitor.AstPrinter;
 import shared.SymbolTable;
+=======
+
+import Ast_Web.AstNode;
+import shared.SymbolTable;
+import visitor.HtmlAstBuilderVisitor;
+import visitor.AstPrinter;
+>>>>>>> d54e76de6f500ed28981183f66cc0addcb0448e8
 
 public class Main {
 
@@ -38,6 +46,7 @@ public class Main {
         AstNode webAst = webVisitor.visit(webTree);
 
         // 3) قراءة ملف Python/Flask
+<<<<<<< HEAD
         Path pyPath = Paths.get("src", "resources","example.py");
         PythonLexer pyLexer = new PythonLexer(CharStreams.fromPath(pyPath, StandardCharsets.UTF_8));
         CommonTokenStream pyTokens = new CommonTokenStream(pyLexer);
@@ -45,13 +54,18 @@ public class Main {
 
         var pyTree = pyParser.file_input();
         var pyAst = (Ast_Paython.Program) new PythonAstBuilder(symbols).visit(pyTree);
+=======
+>>>>>>> d54e76de6f500ed28981183f66cc0addcb0448e8
 
         // 4) الطباعة
         System.out.println("==== شجرة HTML/Jinja/CSS/JSON ====");
         AstPrinter.print(webAst);
 
+<<<<<<< HEAD
         System.out.println("\n==== شجرة Flask/Python ====");
         AstPrinter.print(pyAst);
+=======
+>>>>>>> d54e76de6f500ed28981183f66cc0addcb0448e8
 
         System.out.println("\n==== Symbol Table (مشترك) ====");
         symbols.print();

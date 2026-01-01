@@ -20,9 +20,12 @@ public abstract class AstNode {
     }
 
     public abstract void accept(AstVisitor visitor);
+<<<<<<< HEAD
 
     @Override
     public String toString() {
         return this.getClass().getSimpleName() + " @" + line + ":" + column;
     }
+=======
+>>>>>>> d54e76de6f500ed28981183f66cc0addcb0448e8
 }

@@ -8,5 +8,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Compiler_project" level="project" />
+<<<<<<< HEAD
+=======
+    <orderEntry type="library" name="antlr-4.13.2-complete" level="project" />
+>>>>>>> d54e76de6f500ed28981183f66cc0addcb0448e8
   </component>
 </module>
