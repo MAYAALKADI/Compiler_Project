@@ -1,0 +1,147 @@
+ <!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<div class="container">
+    <h1> </h1>
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>
+
+ {% extends 'base.html' %}
+ {% block title %}إضافة منتج{% endblock %}
+ {% block content %}
+ <form method="post" enctype="multipart/form-data">
+     <input name="name" placeholder="اسم المنتج" required>
+     <input name="price" placeholder="السعر" required>
+     <input type="file" name="image">
+     <button class="btn">حفظ</button>
+ </form>
+ <a href="{{ url_for('index') }}">⬅ رجوع</a>
+ {% endblock %}
+
+
+{% extends 'base.html' %}
+{% block title %}الرئيسية{% endblock %}
+{% block content %}
+    <a href="{{ url_for('add_product') }}" class="btn">➕ إضافة منتج</a>
+    <a href="{{ url_for('products') }}" class="btn">📦 عرض المنتجات</a>
+{% endblock %}
+
+
+{% extends 'base.html' %}
+{% block title %}   {% endblock %}
+{% block content %}
+<h2>{{ product.name }}</h2>
+<p>{{ product.price }} ل.س</p>
+{% if product.image %}
+<img src="{{ url_for('static', filename='images/' ~ product.image) }}" width="280">
+{% endif %}
+<a href="{{ url_for('products') }}"></a>
+{% endblock %}
+
+{% extends 'base.html' %}
+{% block title %}المنتجات{% endblock %}
+{% block content %}
+<ul>
+    {% for p in products %}
+        <li>
+            <strong>{{ p.name }}</strong><br>
+            السعر: {{ p.price }} ل.س<br>
+            <a href="{{ url_for('product_detail', name=p.name) }}"></a>
+        </li>
+    {% else %}
+        <li>لا توجد منتجات.</li>
+    {% endfor %}
+</ul>
+<a href="{{ url_for('index') }}">⬅️ رجوع</a>
+{% endblock %}
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    direction: rtl;
+    background-color: #f0f2f5;
+    padding: 20px;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+a {
+    display: inline-block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #007bff;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #f5f5f5;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+</style>
+
+<script>
+[
+  {
+    "name": "Samsong",
+    "price": "122000",
+    "image": "2.jpg"
+  },
+  {
+    "name": "infinx",
+    "price": "16",
+    "image": "3.jpg"
+  }
+
+]
+</script>
